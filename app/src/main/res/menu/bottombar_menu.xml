@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Adiblar"
+        android:icon="@drawable/ic_adiblar_tab_btn" />
+    <item
+        android:id="@+id/savedFragment"
+        android:title="Saqlanganlar"
+        android:icon="@drawable/ic_save_white_btn2" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="Sozlamalar"
+        android:icon="@drawable/ic_settings_btn" />
+</menu>

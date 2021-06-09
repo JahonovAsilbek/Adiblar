@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainFragment">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottom_bar"
+        style="@style/adiblar_xay"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        app:backgroundColor="@color/white"
+        app:duration="400"
+        app:iconSize="22dp"
+        app:iconTint="#CCF0D7"
+        app:indicatorColor="@color/main_green"
+        app:itemPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_pager_2"
+        app:menu="@menu/bottombar_menu"
+        app:sideMargins="3dp"
+        app:textSize="13sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

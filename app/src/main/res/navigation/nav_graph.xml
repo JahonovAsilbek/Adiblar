@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.revolution.adiblar.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_literatureFragment"
+            app:destination="@id/literatureFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="uz.revolution.adiblar.saved.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_savedFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="uz.revolution.adiblar.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_infoDialogFragment"
+            app:destination="@id/infoDialogFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="uz.revolution.adiblar.add.AddFragment"
+        android:label="AddFragment" />
+    <fragment
+        android:id="@+id/infoDialogFragment"
+        android:name="uz.revolution.adiblar.settings.dialogs.InfoDialogFragment"
+        android:label="fragment_info_dialog"
+        tools:layout="@layout/fragment_info_dialog" />
+    <fragment
+        android:id="@+id/literatureFragment"
+        android:name="uz.revolution.adiblar.classic.LiteratureFragment"
+        android:label="fragment_literature"
+        tools:layout="@layout/fragment_literature" >
+        <action
+            android:id="@+id/action_literatureFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="uz.revolution.adiblar.item.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="uz.revolution.adiblar.home.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/mainFragment2"
+        android:name="uz.revolution.adiblar.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_mainFragment2_to_savedFragment"
+            app:destination="@id/savedFragment" />
+        <action
+            android:id="@+id/action_mainFragment2_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+</navigation>
