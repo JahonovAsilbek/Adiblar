@@ -35,9 +35,9 @@
             android:id="@+id/image"
             android:layout_width="160dp"
             android:layout_height="120dp"
-            android:scaleType="centerCrop"
             android:layout_marginTop="25dp"
             android:background="#C4C4C4"
+            android:scaleType="centerCrop"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title_add" />
@@ -76,7 +76,10 @@
                 android:id="@+id/name_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name" />
+                android:hint="Name"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:singleLine="true" />
 
         </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
 
@@ -97,7 +100,10 @@
                 android:id="@+id/born_year_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Year of birth" />
+                android:hint="Year of birth"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
 
         </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
 
@@ -119,7 +125,10 @@
                 android:id="@+id/died_year_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Year of death" />
+                android:hint="Year of death"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
 
         </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
 
@@ -147,11 +156,13 @@
             app:layout_constraintTop_toBottomOf="@id/spinner">
 
             <EditText
+                android:singleLine="false"
                 android:id="@+id/text_et"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:gravity="top"
                 android:hint="About"
+                android:inputType="textCapSentences"
                 android:paddingStart="10dp" />
 
         </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>

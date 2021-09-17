@@ -1,6 +1,8 @@
 package uz.revolution.adiblar.add
 
 import android.Manifest
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -148,7 +150,12 @@ class AddFragment : Fragment() {
             askPermission(Manifest.permission.READ_EXTERNAL_STORAGE) {
                 //all permissions already granted or just granted
 
-                getImageContent.launch("images/*")
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+                intent.addCategory(Intent.CATEGORY_OPENABLE)
+                intent.type = "image/*"
+                startActivityForResult(intent, 1)
+
+//                getImageContent.launch("images/*")
 
 
             }.onDeclined { e ->
@@ -174,8 +181,10 @@ class AddFragment : Fragment() {
         }
     }
 
-    private var getImageContent =
-        registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
+            val uri = data?.data ?: return
             binding.image.setImageURI(uri)
             val m = System.currentTimeMillis()
             val uploadTask = reference.child(m.toString()).putFile(uri)
@@ -190,6 +199,8 @@ class AddFragment : Fragment() {
             }.addOnFailureListener {
 
             }
+
         }
+    }
 
 }

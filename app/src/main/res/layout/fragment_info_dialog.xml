@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:minWidth="1000dp"
     android:minHeight="250dp"
-    android:layout_height="wrap_content"
     android:padding="10dp"
     tools:context=".settings.dialogs.InfoDialogFragment">
 
@@ -19,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
             android:text="Biz haqimizda"
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
